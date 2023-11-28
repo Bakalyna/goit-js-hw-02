@@ -1,14 +1,25 @@
+// function checkForSpam(message) {
+//   let hasSpam = "spam";
+//   let hasSale = "sale";
+//   if (message.toLowerCase().includes(hasSpam)) {
+//     return true
+//   } else if (message.toLowerCase().includes(hasSale)) {
+//     return true
+//   } else {
+//     return false;
+//   }
+// }
+
+
+
+
 function checkForSpam(message) {
-  let hasSpam = "spam";
-  let hasSale = "sale";
-  if (message.toLowerCase().includes(hasSpam)) {
-    return "true"
-  } else if (message.toLowerCase().includes(hasSale)) {
-    return "true"
-  } else {
-    return "false";
-  }
+    const lowerCaseMessage = message.toLowerCase();
+    return lowerCaseMessage.includes('spam') || lowerCaseMessage.includes('sale');
 }
+
+
+
 
 console.log(checkForSpam('Latest technology news')); // false
 console.log(checkForSpam('JavaScript weekly newsletter')); // false
